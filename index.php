@@ -15,5 +15,9 @@ $translateView->echoHTML();
 if(isset($_POST['Submit'])) {
     $inputText = $_POST['txtin'];
     $translatedText = $translateView->translate($inputText);
-    echo $translatedText;
+    
+    echo "
+        <h3>Översättning:</h3>
+        <p>$translatedText</p>
+    ";
 }

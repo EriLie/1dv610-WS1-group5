@@ -2,7 +2,9 @@
 
 namespace view;
 
+// Translating input into Rövarspråk
 class TranslateView {
+    
     // Header meta data
     private $title = 'Translator group 5 - Rövarspråket';
     private $charset = 'utf-8';
@@ -15,8 +17,12 @@ class TranslateView {
 
     // Translates to rövarspråk
     public function translate($input) {
+        // Convert input into lowercase letters
         $input = strtolower($input);
+        
+        // The rövarspråk output
         $output = "";
+        
         $characters = str_split($input);
         $consonants = array("b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z");
 
@@ -40,11 +46,15 @@ class TranslateView {
         <html>
             <head>
                 <meta charset='$this->charset'>
+                <link rel='stylesheet' type='text/css' href='style.css'>
                 <title>$this->title</title>
             </head>
             <body>
+                <img src='lnu-translate.png' alt='LNU translate logo'>
+
+                <h1>Rövarspråk</h1>
                 <form action='' method='post'>
-                    <textarea name='txtin'>$this->input</textarea>
+                    <textarea name='txtin' placeholder='Enter text to translate here...'>$this->input</textarea>
                     <br>
                     <input type='submit' name='Submit'/>
                 </form>
