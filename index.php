@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace view;
 
 require_once('TranslateView.php'); 

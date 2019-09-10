@@ -10,14 +10,13 @@ class TranslateView {
     // Textarea input
     private $input;
 
-
     // Textarea output
     public $output;
+
     // Function that translates rövarspråk
     public function inputToOutput() {
         $this->output = $this->input;
     }
-
 
     // Rendering page
     public function echoHTML() {
@@ -38,7 +37,4 @@ class TranslateView {
             </body>
         </html>";
     }
-
-
-
 }
