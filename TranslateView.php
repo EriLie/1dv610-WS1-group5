@@ -8,15 +8,16 @@ class TranslateView {
     private $charset = 'utf-8';
 
     // Textarea input
-    private $input = 'khqvwdkhvqd';
+    private $input;
 
 
     // Textarea output
-    private $output;
-    
-    echoHTML();
-
+    public $output;
     // Function that translates rövarspråk
+    public function inputToOutput() {
+        $this->output = $this->input;
+    }
+
 
     // Rendering page
     public function echoHTML() {
@@ -28,10 +29,12 @@ class TranslateView {
                 <title>$this->title</title>
             </head>
             <body>
-                <textarea rows='4' cols='50'></textarea>
-                $this->input
-                <br>
-                $this->output
+                <form action='index.php' method='post'>
+                    <textarea name='txtin'>$this->input</textarea>
+                    <br>
+                    <textarea name='txtout'>$this->output</textarea>
+                    <input type='submit' name='sendInput' />
+                </form>
             </body>
         </html>";
 

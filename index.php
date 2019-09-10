@@ -10,3 +10,6 @@ $translateView = new TranslateView();
 
 $translateView->echoHTML(); 
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo "caught post";
+}
