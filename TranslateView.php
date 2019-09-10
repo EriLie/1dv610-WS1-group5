@@ -3,22 +3,22 @@
 namespace view;
 
 class TranslateView {
-    // Array containing strings
+    // Header meta data
     private $title = 'Translator group 5 - Rövarspråket'; 
     private $charset = 'utf-8';
 
-    // Textarea input
+    // User input
     private $input;
 
-    // Textarea output
+    // Translation output
     public $output;
 
-    // Function that translates rövarspråk
+    // Translates to rövarspråk
     public function inputToOutput() {
         $this->output = $this->input;
     }
 
-    // Rendering page
+    // Renders the page
     public function echoHTML() {
         echo " 
         <!DOCTYPE html>

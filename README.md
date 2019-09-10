@@ -5,5 +5,3 @@
 # Not possible to output the input to the other text area (txtout)
 # No function for translation (yet)
 # Working submit button that should reload page
-
-## Group 2 
