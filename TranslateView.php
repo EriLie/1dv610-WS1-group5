@@ -33,11 +33,10 @@ class TranslateView {
                     <textarea name='txtin'>$this->input</textarea>
                     <br>
                     <textarea name='txtout'>$this->output</textarea>
-                    <input type='submit' name='sendInput' />
+                    <input type='submit' />
                 </form>
             </body>
         </html>";
-
     }
 
 
