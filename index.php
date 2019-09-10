@@ -8,7 +8,8 @@ $translateView = new TranslateView();
 
 $translateView->echoHTML(); 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "caught post";
-    $translateView->inputToOutput();
+if(isset($_POST['Submit'])) {
+    $inputText = $_POST['txtin'];
+    $translatedText = $translateView->translate($inputText);
+    echo $translatedText;
 }

@@ -14,8 +14,8 @@ class TranslateView {
     public $output;
 
     // Translates to rövarspråk
-    public function inputToOutput() {
-        $this->output = $this->input;
+    public function translate($input) {
+        return $input;
     }
 
     // Renders the page
@@ -28,11 +28,10 @@ class TranslateView {
                 <title>$this->title</title>
             </head>
             <body>
-                <form action='index.php' method='post'>
+                <form action='' method='post'>
                     <textarea name='txtin'>$this->input</textarea>
                     <br>
-                    <textarea name='txtout'>$this->output</textarea>
-                    <input type='submit' />
+                    <input type='submit' name='Submit'/>
                 </form>
             </body>
         </html>";
