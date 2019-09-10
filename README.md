@@ -1,5 +1,7 @@
-# TODO:
-# The foundation is set. Thought is to have a string array with the corresponding letter, so that when something is entered, it will loop through the letters and put in the corresponding string ('b' -> 'bob'). We opted to have a view php file that handles what is seen. A bit more work but makes it easier to overview or change the other parts.
+# Rövarspråk
+The goal of the program is to translate an input text to Rövarspråk.
+It is a new language where every consonant will be followed by an "o" and then by the same consonant again: ('b' -> 'bob').
 
-# Issues:
-- Input with uppercase characters doesn't work.
+# TODO:
+- Fix input that contains uppercase characters.
+- Add more comments.
