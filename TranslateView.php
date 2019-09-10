@@ -54,7 +54,7 @@ class TranslateView {
 
                 <h1>Rövarspråk</h1>
                 <form action='' method='post'>
-                    <textarea name='txtin' placeholder='Enter text to translate here...'>$this->input</textarea>
+                    <textarea name='txtin' placeholder='Fyll i text att översätta här...'>$this->input</textarea>
                     <br>
                     <input type='submit' name='Submit'/>
                 </form>
