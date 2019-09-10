@@ -4,7 +4,7 @@ namespace view;
 
 class TranslateView {
     // Header meta data
-    private $title = 'Translator group 5 - Rövarspråket'; 
+    private $title = 'Translator group 5 - Rövarspråket';
     private $charset = 'utf-8';
 
     // User input
@@ -15,12 +15,26 @@ class TranslateView {
 
     // Translates to rövarspråk
     public function translate($input) {
-        return $input;
+        $output = "";
+        $characters = str_split($input);
+        $consonants = array("b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z");
+
+        foreach ($characters as $char) {
+            if (in_array($char, $consonants)) {
+                $output .= $char;
+                $output .= "o";
+                $output .= $char;
+            } else {
+                $output .= $char;
+            }
+        }
+
+        return $output;
     }
 
     // Renders the page
     public function echoHTML() {
-        echo " 
+        echo "
         <!DOCTYPE html>
         <html>
             <head>
